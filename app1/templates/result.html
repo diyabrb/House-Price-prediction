@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Result{% endblock %}
+
+{% block body %}
+<div class = "container-fluid bg-secondary mt-5 p-3 text-center text-light fw-bold fs-3 fst-italic">
+    Result
+  </div>
+<div class="container mt-5">
+  
+
+  <div class="mt-4">
+    <div class="card shadow-sm">
+      <div class="card-body text-center">
+        <h5 class="card-title">Predicted House Price</h5>
+        <h2 class="card-title text-primary">{{ prediction }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class = "container-fluid bg-secondary mt-5 p-3 text-center text-light fw-bold fs-3 fst-italic">
+     Fill in the details below
+</div>
+
+<div class="container mt-5">
+  <div class="row align-items-center text-center">
+
+    <div class="col-md-6">
+      <form action="" method="post" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-3">PREDICT</button>
+      </form>
+    </div>
+
+   <div class="col-md-6">
+      <img src="{% static 'images/h2.jpg' %}" alt="iris" class="img-fluid" >
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}
